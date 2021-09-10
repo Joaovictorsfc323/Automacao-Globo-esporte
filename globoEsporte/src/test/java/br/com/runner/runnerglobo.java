@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 	features = "classpath:Feature/",
 	plugin = "pretty",
 	monochrome = true,
-	tags = "@globoEsporte",
+	tags = "@time1,@time2",
 	glue = {"br.com.stepDefinition"})
 
 

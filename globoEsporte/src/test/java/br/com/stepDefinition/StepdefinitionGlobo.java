@@ -3,8 +3,8 @@ package br.com.stepDefinition;
 import org.openqa.selenium.WebDriver;
 
 import PageObjectgloboesporte.ChromePageObject;
-import PageObjectgloboesporte.TelaprincipalPage;
-import PageObjectgloboesporte.Telainternacional;
+import PageObjectgloboesporte.globoesportePage;
+
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Dado;
@@ -15,8 +15,8 @@ public class StepdefinitionGlobo extends ChromePageObject {
 
 
 	ChromePageObject chromePageObject = new ChromePageObject();
-	TelaprincipalPage telaprincipalpage = new TelaprincipalPage();
-	Telainternacional telainternacional = new Telainternacional();
+	globoesportePage telaprincipalpage = new globoesportePage();
+	
 	public WebDriver nave;
 	
 	
@@ -55,18 +55,12 @@ public class StepdefinitionGlobo extends ChromePageObject {
 	    
 	}
 
-	@Quando("^escolher menu \"([^\"]*)\"$")
-	public void escolher_menu(String futebolInternacional) throws Throwable {
-		telainternacional.escolhermenu(getNave(),futebolInternacional);
-	    
-	}
 
 	
 	
-	
-	@Entao("^coleto a noticia \"([^\"]*)\"$")
-	public void coleto_a_noticia(String arg1) throws Throwable {
-	    
+	@Entao("^coleto titulo\"([^\"]*)\"$")
+	public void coleto_titulo(String time) throws Throwable {
+		telaprincipalpage.coletotitulo(getNave(),time);
 	}
 	
 	

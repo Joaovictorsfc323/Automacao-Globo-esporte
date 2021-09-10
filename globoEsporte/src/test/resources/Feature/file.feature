@@ -1,16 +1,28 @@
 # language: pt 
 # enconding:  UTF-8
 
-@globoEsporte
+
 Funcionalidade: noticia do santos 
 
+@time1
 Esquema do Cenario: aparecer as noticias do santos
 Dado que estou no site "<url>"
 Quando clico no botao do time "<time>"
-E escolher menu "<Menu>"
-Entao coleto a noticia "<time>"
+Entao coleto titulo"<time>"
 
 
 Exemplos:
-|url                  |time  |Menu                 |
-|https://ge.globo.com/|santos|futebol Internacional|
+|url                  |time  |
+|https://ge.globo.com/|SANTOS|
+
+
+@time2
+Esquema do Cenario: aparecer as noticias do palmeiras
+Dado que estou no site "<url>"
+Quando clico no botao do time "<time>"
+Entao coleto titulo"<time>"
+
+
+Exemplos:
+|url                  |time     |
+|https://ge.globo.com/|PALMEIRAS|
